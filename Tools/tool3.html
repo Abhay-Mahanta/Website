@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Packet Sniffing Tool</title>
+    <style>
+        .navbar{
+            background-color: black;
+            border-radius: 10px;
+            margin: 2px 2px 10px 2px;
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 10px 20px;
+        }
+        .navbar a{
+            color: white;
+            padding: 3px 3px;
+            text-decoration: none;
+        }
+        .navbar a:hover{
+            color:black
+        }
+        .navbar li:hover{
+            background-color: white;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+        div{
+            margin-left: 20px;
+            font-size: larger;
+        }
+        header{
+            font-size: larger; 
+        }
+        footer{
+            background-color: black;
+            margin: 20px 0px 0px 0px;
+            color: white;
+        }
+        code{
+            background-color: rgb(232, 232, 232);
+        }
+        .user, .website, .achievements {
+            width: 100%;
+            margin: 20px auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        h2, p {
+            margin: 10px;
+            font-size: larger;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Abhay's Website :</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html" title="Home page">Home</a></li>
+                <li><a href="tool1.html" title="Network Scanning and Deauthentication Tool">Tool 1</a></li>
+                <li><a href="tool2.html" title="DNS Spoofing Tool">Tool 2</a></li>
+                <li><a href="tool3.html" style="background-color: grey;" title="HTTP Packet Sniffing Tool">Tool 3</a></li>
+                <li><a href="tool4.html" title="ARP Spoofing Tool">Tool 4</a></li>
+                <li><a href="tool5.html" title="WordList Generator">Tool 5</a></li>
+                <li><a href="tool6.html" title="Wifi Deauther">Tool 6</a></li>
+                <li><a href="tool7.html" title="Network Scanner">Tool 7</a></li>
+                <li><a href="tool8.html" title="Mac Address Changer">Tool 8</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h1>HTTP Packet Sniffing Tool</h1>
+
+        <p>This Python script captures HTTP traffic on a specified network interface to monitor and extract visited URLs and potential usernames and passwords from HTTP requests. It uses the Scapy library to sniff and process network packets in real-time.</p>
+
+        <h2>Features</h2>
+        <ul>
+            <li><strong>URL Monitoring</strong>: Captures and displays URLs visited by users on the network.</li>
+            <li><strong>Credential Extraction</strong>: Searches for and highlights potential usernames and passwords in HTTP requests.</li>
+        </ul>
+
+        <h2>Usage</h2>
+        <p>The script accepts one argument:</p>
+        <ul>
+            <li><code>-i</code> or <code>--iface</code>: The name of the network interface to sniff on.</li>
+        </ul>
+
+        <h2>Requirements</h2>
+        <ul>
+            <li>Python 3.x</li>
+            <li>Scapy library</li>
+        </ul>
+
+        <h2>Installation</h2>
+        <ol>
+            <li>Clone the repository:
+                <pre><code>git clone https://github.com/Abhay-Mahanta/HTTP-Packet-Sniffer
+        cd HTTP-Packet-Sniffer</code></pre>
+            </li>
+            <li>Install the required Python library:
+                <pre><code>pip install scapy
+        pip install scapy_http</code></pre>
+            </li>
+        </ol>
+
+        <h2>Example</h2>
+        <img src="https://github.com/user-attachments/assets/02e4911d-0d97-43ec-9bd3-0aa76e110329" alt="Example Image">
+
+        <h2>Running the Tool</h2>
+        <p>To run the HTTP sniffing tool, use the following command:</p>
+        <pre><code>sudo python packet_sniffer.py -i &lt;interface&gt;</code></pre>
+
+        <h2>Important Note</h2>
+        <p>This tool is intended for educational and ethical purposes only. Unauthorized use of this tool on networks where you do not have permission is illegal and unethical. Use it responsibly and only on networks you own or have explicit permission to test.</p>
+
+        <h2>Additional Note</h2>
+        <p>If you want to sniff packets outside your computer, you should be performing a MITM (Man-In-The-Middle) attack between that computer and the router.</p>
+        <h2>Download Code File Here:</h2>
+        <div style="text-align: center;">
+            <a href="../Code Files/packet_sniffer.py" download="packet_sniffer.py">Click here!</a>
+        </div>
+        
+    </div>
+    <footer>
+        <h1 style="margin: 130px 2px 2px 2px;">Contact Details:</h1>
+        <a href="https://tryhackme.com/p/abhay.11105">
+            <img src="https://tryhackme-badges.s3.amazonaws.com/abhay.11105.png" alt="TryHackMe">
+        </a>
+        <a href="https://github.com/Abhay-Mahanta">
+            <img src="../images/github-logo.png" alt="Github" style="width: 100px; margin: 0px 0px -19px 16px;">
+        </a>
+        <p style="margin: 20px 2px 2px 2px;">email: abhay.17189@sakec.ac.in</p>
+    </footer>
+</body>
+</html>

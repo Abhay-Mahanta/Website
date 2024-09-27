@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARP Spoofing Tool</title>
+    <style>
+        .navbar{
+            background-color: black;
+            border-radius: 10px;
+            margin: 2px 2px 10px 2px;
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 10px 20px;
+        }
+        .navbar a{
+            color: white;
+            padding: 3px 3px;
+            text-decoration: none;
+        }
+        .navbar a:hover{
+            color:black
+        }
+        .navbar li:hover{
+            background-color: white;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+        div{
+            margin-left: 20px;
+            font-size: larger;
+        }
+        header{
+            font-size: larger; 
+        }
+        footer{
+            background-color: black;
+            margin: 20px 0px 0px 0px;
+            color: white;
+        }
+        code{
+            background-color: rgb(232, 232, 232);
+        }
+        .user, .website, .achievements {
+            width: 100%;
+            margin: 20px auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        h2, p {
+            margin: 10px;
+            font-size: larger;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Abhay's Website :</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html" title="Home page">Home</a></li>
+                <li><a href="tool1.html" title="Network Scanning and Deauthentication Tool">Tool 1</a></li>
+                <li><a href="tool2.html" title="DNS Spoofing Tool">Tool 2</a></li>
+                <li><a href="tool3.html" title="HTTP Packet Sniffing Tool">Tool 3</a></li>
+                <li><a href="tool4.html" style="background-color: grey;" title="ARP Spoofing Tool">Tool 4</a></li>
+                <li><a href="tool5.html" title="WordList Generator">Tool 5</a></li>
+                <li><a href="tool6.html" title="Wifi Deauther">Tool 6</a></li>
+                <li><a href="tool7.html" title="Network Scanner">Tool 7</a></li>
+                <li><a href="tool8.html" title="Mac Address Changer">Tool 8</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h1>ARP Spoofing Tool</h1>
+
+        <p>This Python script performs ARP spoofing (also known as ARP poisoning) to intercept network traffic between two IP addresses. The tool is designed for educational purposes and should only be used in controlled environments where you have explicit permission to perform network tests. The script uses Scapy, a powerful Python library for network packet manipulation, to send ARP spoofing packets and manipulate ARP tables.</p>
+
+        <h2>Features</h2>
+        <ul>
+            <li><strong>ARP Spoofing</strong>: Continuously sends ARP spoofing packets to redirect traffic between the target IP and gateway IP.</li>
+            <li><strong>Restore Function</strong>: Restores the ARP tables to their original state when the script is interrupted.</li>
+            <li><strong>Count Display</strong>: Displays the number of spoofed packets sent in real-time.</li>
+        </ul>
+
+        <h2>Requirements</h2>
+        <ul>
+            <li>Python 3.x</li>
+            <li>Scapy (install via <code>pip install scapy</code>)</li>
+        </ul>
+
+        <h2>Usage</h2>
+        <ol>
+            <li><strong>Install Scapy</strong>:
+                <pre><code>pip install scapy</code></pre>
+            </li>
+            <li><strong>Run the Script</strong>:
+                <pre><code>python3 arp_spoof.py --target [TARGET-IP] --gateway [GATEWAY-IP]</code></pre>
+            </li>
+        </ol>
+
+        <h2>Example</h2>
+        <img src="https://github.com/user-attachments/assets/f9e9b82d-160f-4e93-b4f4-7ae28f1eaf98" alt="Example Image">
+
+        <h2>Notes</h2>
+        <ul>
+            <li><strong>Legal Disclaimer</strong>: This tool should only be used for educational purposes and in environments where you have permission to perform network tests. Unauthorized use of this tool is illegal and unethical.</li>
+            <li><strong>Dependencies</strong>: Ensure that Scapy is properly installed and that you have the necessary permissions to send ARP packets on your network.</li>
+        </ul>
+
+        <p>Feel free to customize the script and use it to learn more about network security and ARP spoofing.</p>
+        <h2>Download Code File Here:</h2>
+        <div style="text-align: center;">
+            <a href="../Code Files/arp_spoof.py" download="arp_spoof.py">Click here!</a>
+        </div>
+        
+    </div>
+    <footer>
+        <h1 style="margin: 130px 2px 2px 2px;">Contact Details:</h1>
+        <a href="https://tryhackme.com/p/abhay.11105">
+            <img src="https://tryhackme-badges.s3.amazonaws.com/abhay.11105.png" alt="TryHackMe">
+        </a>
+        <a href="https://github.com/Abhay-Mahanta">
+            <img src="../images/github-logo.png" alt="Github" style="width: 100px; margin: 0px 0px -19px 16px;">
+        </a>
+        <p style="margin: 20px 2px 2px 2px;">email: abhay.17189@sakec.ac.in</p>
+    </footer>
+</body>
+</html>
