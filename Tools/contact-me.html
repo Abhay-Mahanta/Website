@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        .navbar{
+            background-color: black;
+            border-radius: 10px;
+            margin: 2px 2px 10px 2px;
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 10px 20px;
+        }
+        .navbar a{
+            color: white;
+            padding: 3px 3px;
+            text-decoration: none;
+        }
+        .navbar a:hover{
+            color:black
+        }
+        .navbar li:hover{
+            background-color: white;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+        div{
+            margin-left: 20px;
+            font-size: larger;
+        }
+        header{
+            font-size: larger; 
+        }
+        footer{
+            background-color: black;
+            margin: 20px 0px 0px 0px;
+            color: white;
+        }
+        code{
+            background-color: rgb(232, 232, 232);
+        }
+        .user, .website, .achievements {
+            width: 100%;
+            margin: 20px auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        h2, p {
+            margin: 10px;
+            font-size: larger;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        h1{
+            text-align: center;
+        }        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }        
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 80%;
+            padding: 10px;
+        }        
+        #submit {
+            border: none;
+            background-color: black;
+            color: white;
+            width: 200px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        #submit:hover {
+            background-color: grey ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Abhay's Website :</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html" title="Home page">Home</a></li>
+                <li><a href="tool1.html" title="Network Scanning and Deauthentication Tool">Tool 1</a></li>
+                <li><a href="tool2.html" title="DNS Spoofing Tool">Tool 2</a></li>
+                <li><a href="tool3.html" title="HTTP Packet Sniffing Tool">Tool 3</a></li>
+                <li><a href="tool4.html" title="ARP Spoofing Tool">Tool 4</a></li>
+                <li><a href="tool5.html" title="WordList Generator">Tool 5</a></li>
+                <li><a href="tool6.html" title="Wifi Deauther">Tool 6</a></li>
+                <li><a href="tool7.html" title="Network Scanner">Tool 7</a></li>
+                <li><a href="tool8.html" title="Mac Address Changer">Tool 8</a></li>
+                <li><a href="contact-me.html" style="background-color: grey;" title="Contact Me">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <form method="post" action="https://script.google.com/macros/s/AKfycbxvdTWo8MbAeEs8WaOy5MAv_dTXbB8JDGteAkL2-lGPvmbr_ABfz9WT9e4bMG5XJctpLg/exec" name="contact-form">
+			<h1>Contact Us</h1>
+			<input type="text" name="your-name" placeholder="Name">
+			<input type="text" name="your-number" placeholder="Number">
+			<input type="email" name="your-email" placeholder="Email">
+			<textarea name="message" rows="7" placeholder="Your Message"></textarea>
+			<input type="submit" value="Submit" id="submit">
+		</form>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxvdTWo8MbAeEs8WaOy5MAv_dTXbB8JDGteAkL2-lGPvmbr_ABfz9WT9e4bMG5XJctpLg/exec'
+                const form = document.forms['contact-form']
+                form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thank you! your form is submitted successfully." ))
+                .then(() => { window.location.reload(); })
+                .catch(error => console.error('Error!', error.message))
+                })
+        </script>
+    </div>
+    <footer>
+        <h1 style="margin: 130px 2px 2px 2px;">Contact Details:</h1>
+        <a href="https://tryhackme.com/p/abhay.11105">
+            <img src="https://tryhackme-badges.s3.amazonaws.com/abhay.11105.png" alt="TryHackMe">
+        </a>
+        <a href="https://github.com/Abhay-Mahanta">
+            <img src="../images/github-logo.png" alt="Github" style="width: 100px; margin: 0px 0px -19px 16px;">
+        </a>
+        <p style="margin: 20px 2px 2px 2px;">email: abhay.17189@sakec.ac.in</p>
+    </footer>
+</body>
+</html>
